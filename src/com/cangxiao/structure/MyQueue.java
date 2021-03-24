@@ -1,4 +1,4 @@
-package com.baiyu.structure;
+package com.cangxiao.structure;
 
 /**
  * @Author: cangxiao
