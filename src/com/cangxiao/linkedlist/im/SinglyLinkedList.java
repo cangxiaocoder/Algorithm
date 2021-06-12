@@ -216,7 +216,7 @@ public class SinglyLinkedList {
            }
 
            System.out.println("中间节点" + p.data);
-           System.out.println("开始执行奇数节点的回文判断");
+            System.out.println("开始执行奇数节点的回文判断");
            Node leftLink = null;
            Node rightLink = null;
            if(q.next == null){
@@ -315,7 +315,7 @@ public class SinglyLinkedList {
         //int data[] = {1,2,5};
         //int data[] = {1,2,2,1};
        // int data[] = {1,2,5,2,1};
-        int data[] = {1,2,5,3,1};
+        int data[] = {1,2,3,4,5};
 
         for(int i =0; i < data.length; i++){
             //link.insertToHead(data[i]);
@@ -336,7 +336,7 @@ public class SinglyLinkedList {
             System.out.println("不是回文");
         }*/
         link.printAll();
-        Node node = link.inverseLinkList(link.head);
+        Node node = link.inverseLinkList_head(link.head);
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;

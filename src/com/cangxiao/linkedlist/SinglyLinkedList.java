@@ -1,10 +1,16 @@
 package com.cangxiao.linkedlist;
 
 import javax.naming.NoPermissionException;
+import java.nio.channels.NotYetBoundException;
 import java.util.LinkedList;
 import java.util.Objects;
 
 /**
+ * 所有的链表都有一个头指针head，
+ * 带头结点的链表中head的数据项为空，
+ * 而不带头的链表直接在头结点存入数据，
+ * 那么当从头插入数据时，head需要时刻变化。
+ *
  * @Author cangxiao
  * @Date 2021/6/6
  * @Desc 单链表的插入、删除、查找、链表翻转操作
@@ -73,6 +79,52 @@ public class SinglyLinkedList<T> {
     }
 
     /**
+     * 不带头链表翻转 - 头插法反转
+     * 带头结点的链表中head的数据项为空，
+     * 而不带头的链表直接在头结点存入数据
+     */
+    public Node<T> inverseLinkList(Node<T> node) {
+        if (node == null) return null;
+        Node<T> current = node;
+        Node<T> next = null;
+        head = null;
+        Node<T> Head;
+        while (current != null) {
+            next = current.next;
+            addToHead(current.data);
+            current = next;
+        }
+        Head = head;
+        return Head;
+    }
+
+    /**
+     * 每次取出一个结点，并且此结点的下一个结点指向pre，
+     *
+     * 不带头链表翻转
+     * 带头结点的链表中head的数据项为空，
+     * 而不带头的链表直接在头结点存入数据
+     */
+    public Node<T> inverseLinkList2(Node<T> node) {
+        if (node == null) return null;
+        Node<T> current = node;
+        Node<T> pre = null;
+        Node<T> next = null;
+        while (current!=null) {
+            //取当前结点的next结点
+            next = current.next;
+            //当前结点的next指针只想pre;
+            current.next = pre;
+            //pre指针向左移动
+            pre = current;
+            //向右移动指针到下一个结点
+            current = next;
+
+        }
+        return pre;
+    }
+
+    /**
      * 删除一个节点
      */
 
@@ -88,6 +140,24 @@ public class SinglyLinkedList<T> {
             if (node.next.data.equals(value)) {
                 Node<T> temp = node.next;
                 node.next = temp.next;
+                temp = null;
+            }
+            node = node.next;
+        }
+    }
+
+    public void deleteByValue2(T value) {
+        if (head == null || value == null) {
+            return;
+        }
+        if (value.equals(head.data)) {
+            head = head.next;
+        }
+        Node<T> node = head;
+        while (node != null) {
+            if (node.data.equals(value)) {
+                Node<T> temp = node;
+                node = temp.next;
                 temp = null;
             }
             node = node.next;
@@ -146,16 +216,19 @@ public class SinglyLinkedList<T> {
 
         SinglyLinkedList<Integer> link = new SinglyLinkedList<>();
 
-        int data[] = {1, 2, 5, 3, 1};
+        int data[] = {1, 2, 3, 4, 5};
 
-        for (int i = 0; i < data.length; i++) {
+        for (int datum : data) {
             //link.insertToHead(data[i]);
-            link.addToHead(data[i]);
+            link.add(datum);
         }
 
-        System.out.println(link.head);
-        link.deleteByValue(2);
-        System.out.println(link.head);
+//        System.out.println(link.head);
+        Node<Integer> list = link.inverseLinkList2(link.head);
+        System.out.println(list);
+
+
+
 //        System.out.println(link.findByValue(5));
 //        System.out.println(link.print(link.findByIndex(3)));
     }
