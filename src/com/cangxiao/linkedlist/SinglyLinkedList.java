@@ -1,8 +1,5 @@
 package com.cangxiao.linkedlist;
 
-import javax.naming.NoPermissionException;
-import java.nio.channels.NotYetBoundException;
-import java.util.LinkedList;
 import java.util.Objects;
 
 /**
@@ -98,6 +95,42 @@ public class SinglyLinkedList<T> {
         return Head;
     }
 
+    public boolean palindrome(){
+        if(head==null) return false;
+        if(head.next==null) return true;// 只有一个元素
+        Node<T> p = head; //慢指针
+        Node<T> q = head;//快指针
+        Node<T> next = null;
+        Node<T> left = null;
+        Node<T> right = null;
+        //慢指针每次向后移动一步， 快指针每次向后移动两步，当快指针走完时，慢指针必定处于中间
+        while (q.next!=null && q.next.next!=null){
+            q = q.next.next;
+            next = p.next;
+            p.next = left;
+            left = p;
+            p = next;
+        }
+
+        right = p.next;
+        if ((size&1)==0){
+            next = p.next;
+            p.next = left;
+            left = p;
+        }
+        System.out.println(left);
+        System.out.println(right);
+        while (left!=null && right != null){
+            if(left.data.equals(right.data)){
+                left = left.next;
+                right = right.next;
+                continue;
+            }
+            return false;
+        }
+        return true;
+    }
+
     /**
      * 每次取出一个结点，并且此结点的下一个结点指向pre，
      *
@@ -109,7 +142,7 @@ public class SinglyLinkedList<T> {
         if (node == null) return null;
         Node<T> current = node;
         Node<T> pre = null;
-        Node<T> next = null;
+        Node<T> next;
         while (current!=null) {
             //取当前结点的next结点
             next = current.next;
@@ -214,18 +247,20 @@ public class SinglyLinkedList<T> {
 //        list.get(1);
         System.out.println(list.get(0));*/
 
-        SinglyLinkedList<Integer> link = new SinglyLinkedList<>();
+        SinglyLinkedList<String> link = new SinglyLinkedList<>();
 
-        int data[] = {1, 2, 3, 4, 5};
+        String data[] = {"h", "e", "l", "l", "o", "o"};
 
-        for (int datum : data) {
+        for (String datum : data) {
             //link.insertToHead(data[i]);
             link.add(datum);
         }
+//        Node<Integer> list = link.inverseLinkList2(link.head);
+//        System.out.println(list);
 
+        System.out.println("link.palindrome() = " + link.palindrome());
 //        System.out.println(link.head);
-        Node<Integer> list = link.inverseLinkList2(link.head);
-        System.out.println(list);
+
 
 
 

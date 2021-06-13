@@ -328,20 +328,20 @@ public class SinglyLinkedList {
        //     p = p.next;
        // }
 
-        /*System.out.println("打印原始:");
+        System.out.println("打印原始:");
         link.printAll();
         if (link.palindrome()){
             System.out.println("回文");
         }else{
             System.out.println("不是回文");
-        }*/
-        link.printAll();
+        }
+        /*link.printAll();
         Node node = link.inverseLinkList_head(link.head);
         while (node != null) {
             System.out.print(node.data + " ");
             node = node.next;
         }
-        System.out.println();
+        System.out.println();*/
     }
 
 }
