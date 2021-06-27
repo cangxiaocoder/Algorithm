@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 将未排序区间的元素B和已排序的元素[A,C]做比较，如果未排序的元素B小于做比较的元素C，将其插入到这个元素C之前
- * 每次只需要比较宜居排序的元素区间， 初始排序区间里只有一个元素，即第一个元素
+ * 每次只需要比较已经排序的元素区间， 初始排序区间里只有一个元素，即第一个元素
  *          346132
  * 移动     346632        value = 1;
  * 移动     344632        value = 1;
@@ -39,7 +39,7 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         int[] array = {15,24,13,28,10,11,1,5,3};
-        BubbleSort.sort(array);
+        InsertionSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
 }
