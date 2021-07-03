@@ -14,7 +14,7 @@ public class SelectionSort {
         for (int i = 0; i < array.length; i++) {
             int min = i;
             //每次讲最小值移动到最前面，所有只需要比较后面未排序的
-            for (int j = i; j < array.length; j++) {
+            for (int j = i+1; j < array.length; j++) {
                 //找出未排序中的最小值
                 if(array[j]<array[min]){
                     min = j;
