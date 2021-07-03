@@ -13,16 +13,13 @@ public class SelectionSort {
         if(array.length<2)return;
         for (int i = 0; i < array.length; i++) {
             int min = i;
-            boolean flag = false;
             //每次讲最小值移动到最前面，所有只需要比较后面未排序的
-            for (int j = i+1; j < array.length; j++) {
+            for (int j = i; j < array.length; j++) {
                 //找出未排序中的最小值
                 if(array[j]<array[min]){
                     min = j;
-                    flag = true;
                 }
             }
-            if(!flag) break;
             //将最小值与未排序的第一个值进行交换
             swap(array, i, min);
         }
@@ -36,7 +33,7 @@ public class SelectionSort {
 
 
     public static void main(String[] args) {
-        int[] array = {10,24,13,28,15,11,1,5,3};
+        int[] array = {1,24,13,28,15,11,1,5,3};
 //        int[] array = {4,6,7,5};
         SelectionSort.sort(array);
         System.out.println(Arrays.toString(array));
