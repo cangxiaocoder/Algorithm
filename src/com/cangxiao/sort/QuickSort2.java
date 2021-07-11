@@ -11,8 +11,8 @@ public class QuickSort2 {
 
     public static void main(String[] args) {
 //        int[] array = {13,15,24,99,14,11,1,2,3};
-//        int[] array = {6,3,11,9,8,6};
-        int[] array = {1,2,3,4,5,6};
+//        int[] array = {6,11,2,9,8};
+        int[] array = {3,2,5,4,1};
         QuickSort2 quickSort = new QuickSort2();
         quickSort.sort(array,0,array.length-1);
         System.out.println(Arrays.toString(array));
