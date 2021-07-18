@@ -36,7 +36,7 @@ public class CountingSort {
         for (int i = 1; i < c.length; i++) {
             c[i] = c[i]+c[i-1];
         }
-        int[] temp = new int[8];
+        int[] temp = new int[array.length];
         for (int j : array) {
             temp[--c[j]] = j;
         }

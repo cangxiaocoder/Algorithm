@@ -26,7 +26,7 @@ public class InsertionSort {
             for (;j>=0;j-- ) {
                 //将value与已排序的所有元素做比较
                 if(array[j]>value){
-                    //如果以排序的元素大于value，将这个元素向后移动
+                    //如果已排序的元素大于value，将这个元素向后移动
                     array[j+1] = array[j];
                 }else {
                     //如果不大于， 说明找到了插入的位置
