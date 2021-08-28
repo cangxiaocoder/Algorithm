@@ -24,11 +24,25 @@ public class Solution206 {
         return reverse;
     }
 
+    public ListNode reverseList2(ListNode head) {
+        ListNode reverse = new ListNode();
+        ListNode p = head ;
+        while (p!=null){
+            ListNode temp = reverse.next;
+            ListNode next = p.next;
+            reverse.next = p;
+            reverse.next.next = temp;
+            p = next;
+        }
+        return reverse.next;
+    }
+
     public static void main(String[] args) {
         ListNode listNode = new ListNode(1);
         listNode.next = new ListNode(2);
         listNode.next.next = new ListNode(3);
         Solution206 solution206 = new Solution206();
-        solution206.reverseList(listNode);
+        ListNode reverseList = solution206.reverseList2(listNode);
+        System.out.println(reverseList);
     }
 }
