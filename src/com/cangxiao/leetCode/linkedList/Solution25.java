@@ -22,7 +22,46 @@ package com.cangxiao.leetCode.linkedList;
 public class Solution25 {
 
     public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode newHead = new ListNode();
+//        newHead.next = head;
+        ListNode p = head;
+        ListNode h = newHead;
+        ListNode q = null;
+        int i = 0;
+        while (p!=null){
+            if(i%k==0){
+                q = p;
 
-        return null;
+            }
+            p = reverse(p, h);
+            i++;
+        }
+        ListNode.print(q);
+        ListNode.print(h);
+        return newHead.next;
+    }
+
+    private ListNode reverse(ListNode p, ListNode h) {
+        ListNode next = p.next;
+        ListNode temp = h.next;
+        h.next = p;
+        h.next.next = temp;
+
+        p = next;
+        return p;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(0%2);
+        LinkedList linkedList = new LinkedList();
+        linkedList.add(1);
+        linkedList.add(2);
+        linkedList.add(3);
+        linkedList.add(4);
+        linkedList.add(5);
+        Solution25 solution25 = new Solution25();
+        ListNode listNode = solution25.reverseKGroup(linkedList.head, 10);
+        ListNode.print(listNode);
     }
 }

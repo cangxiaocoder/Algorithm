@@ -38,18 +38,18 @@ public class Solution206 {
     }
 
     public static void main(String[] args) {
-//        ListNode listNode = new ListNode(1);
-//        listNode.next = new ListNode(2);
-//        listNode.next.next = new ListNode(3);
-//        Solution206 solution206 = new Solution206();
-//        ListNode reverseList = solution206.reverseList2(listNode);
-//        System.out.println(reverseList);
+        ListNode listNode = new ListNode(1);
+        listNode.next = new ListNode(2);
+        listNode.next.next = new ListNode(3);
+        Solution206 solution206 = new Solution206();
+        ListNode reverseList = solution206.reverseList2(listNode);
+        ListNode.print(reverseList);
 
-        LinkedList linkedList = new LinkedList();
-        linkedList.addHead(1);
-        linkedList.addHead(2);
-        linkedList.addHead(3);
-
-        System.out.println(linkedList.toString());
+//        LinkedList linkedList = new LinkedList();
+//        linkedList.addHead(1);
+//        linkedList.addHead(2);
+//        linkedList.addHead(3);
+//
+//        System.out.println(linkedList.toString());
     }
 }

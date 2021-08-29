@@ -38,10 +38,10 @@ public class Solution328 {
         l1.add(2);
         l1.add(3);
         l1.add(4);
-//        l1.add(5);
+        l1.add(5);
 
         Solution328 solution328 = new Solution328();
         ListNode listNode = solution328.oddEvenList(l1.head);
-        listNode.print(listNode);
+        ListNode.print(listNode);
     }
 }
