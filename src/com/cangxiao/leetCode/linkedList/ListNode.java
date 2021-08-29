@@ -16,7 +16,7 @@ public class ListNode {
         this.next = next;
     }
 
-    public void print(ListNode listNode) {
+    public static void print(ListNode listNode) {
         ListNode p = listNode;
         StringBuilder sb = new StringBuilder();
         sb.append("{");
