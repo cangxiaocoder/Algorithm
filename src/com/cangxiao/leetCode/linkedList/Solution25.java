@@ -23,32 +23,60 @@ public class Solution25 {
 
     public ListNode reverseKGroup(ListNode head, int k) {
         ListNode newHead = new ListNode();
-//        newHead.next = head;
+        ListNode tail = newHead;
+
         ListNode p = head;
-        ListNode h = newHead;
-        ListNode q = null;
-        int i = 0;
+
         while (p!=null){
-            if(i%k==0){
-                q = p;
+            ListNode q = p;
+            int i = 1;
+            while (q!=null){
+                //q走了k步，结束循环，执行反转
+                if(i%k==0){
+                    break;
+                }
+                i++;
+                q = q.next;
 
             }
-            p = reverse(p, h);
-            i++;
+            if(q==null){
+                tail.next = p;
+                return newHead.next;
+            }else {
+                ListNode temp = q.next;
+                ListNode[] listNodes = this.reverse(p, q);
+                /*
+                 * tail最开始指向newHead即使头节点也是尾节点，
+                 * 为节点指向反转后的链表的头节点
+                 */
+                tail.next = listNodes[0];
+                //将tail重新指向尾节点
+                tail = listNodes[1];
+                p = temp;
+            }
         }
-        ListNode.print(q);
-        ListNode.print(h);
+
         return newHead.next;
     }
 
-    private ListNode reverse(ListNode p, ListNode h) {
-        ListNode next = p.next;
-        ListNode temp = h.next;
-        h.next = p;
-        h.next.next = temp;
-
-        p = next;
-        return p;
+    /**
+     * 反转链表的一部分，
+     * @param head - 反转部分的头节点
+     * @param tail - 反转部分的尾节点
+     * @return 反转后的头节点和尾节点
+     */
+    private ListNode[] reverse(ListNode head, ListNode tail) {
+        ListNode newHead = new ListNode();
+        ListNode p = head;
+        while (p!=tail){
+            ListNode next = p.next;
+            ListNode temp = newHead.next;
+            newHead.next = p;
+            newHead.next.next = temp;
+            p = next;
+        }
+        tail.next = newHead.next;
+        return new ListNode[]{tail,head};
     }
 
 
@@ -60,8 +88,11 @@ public class Solution25 {
         linkedList.add(3);
         linkedList.add(4);
         linkedList.add(5);
+        linkedList.add(6);
+        linkedList.add(7);
+        linkedList.add(8);
         Solution25 solution25 = new Solution25();
-        ListNode listNode = solution25.reverseKGroup(linkedList.head, 10);
-        ListNode.print(listNode);
+        ListNode listNodes = solution25.reverseKGroup(linkedList.head, 3);
+        ListNode.print(listNodes);
     }
 }
