@@ -63,8 +63,8 @@ public class ArrayQueue<T> {
         queue.enqueue("你");
         System.out.println(queue);
         System.out.println(queue.head+"<==>"+ queue.tail);
-        queue.dequeue();
-        queue.dequeue();
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
         System.out.println(queue);
         System.out.println(queue.head+"<==>"+ queue.tail);
         queue.enqueue("hello");
