@@ -44,11 +44,11 @@ public class QuickSort {
                 }
                 i++;
             }
-            System.out.println(Arrays.toString(array));
+//            System.out.println(Arrays.toString(array));
         }
         //最后交换i和pivot的位置；将pivot的值放到数组中间
         swap(array,i,q);
-        System.out.println(" i = " + i);
+//        System.out.println(" i = " + i);
         return i;
     }
     public void swap(int[] array, int left, int right){

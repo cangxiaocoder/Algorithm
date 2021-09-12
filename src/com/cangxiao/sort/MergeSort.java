@@ -6,6 +6,14 @@ import java.util.Arrays;
  * @Author cangxiao
  * @Date 2021/7/4
  * @Desc 归并排序
+ * 1.时间复杂度：
+ * 最好情况：数据已有序， 时间复杂度是O(Log n)
+ * 最坏情况：数据是倒序，时间复杂度是O(Log n)
+ * 平均情况：时间复杂度是O(Log n)
+ * 2.空间复杂度：
+ * O(n)
+ * 3.非原地排序算法
+ * 4.是稳定的排序算法
  */
 public class MergeSort {
 

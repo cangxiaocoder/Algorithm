@@ -1,5 +1,7 @@
 package com.cangxiao.sort;
 
+import java.util.Arrays;
+
 /**
  * @Author cangxiao
  * @Date 2021/7/10
@@ -15,6 +17,7 @@ public class SelectK {
         value = selectK.sort(array, 0, array.length - 1);
 
         System.out.println("第K大的元素是："+value);
+        System.out.println("第K大的元素是："+ Arrays.toString(array));
     }
 
     public int sort(int[] array, int left, int right) {
