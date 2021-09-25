@@ -32,5 +32,6 @@ public class BSearch_3 {
         BSearch_3 bSearch_3 = new BSearch_3();
         System.out.println("无重复数据的循环有序数组中查找最小值  = " + bSearch_3.search(new int[]{7, 9, 10, 10, 15, 1, 2, 3, 4, 5, 5}, 11));
         System.out.println("无重复数据的循环有序数组中查找最小值  = " + bSearch_3.search(new int[]{ 1, 2, 3, 4, 5, 5}, 10));
+        System.out.println("无重复数据的循环有序数组中查找最小值  = " + bSearch_3.search(new int[]{ 3, 4, 0, 1, 2}, 10));
     }
 }
