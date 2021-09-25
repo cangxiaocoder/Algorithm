@@ -151,16 +151,18 @@ public class BinarySearch2 {
         int[] array = {33, 45, 55, 55, 55, 67, 98};
         BinarySearch2 binarySearch = new BinarySearch2();
         int index = binarySearch.search2(array, 11);
-        System.out.println("index = " + index);
+        System.out.println("最后一个值等于给定值的元素 = " + index);
         index = binarySearch.search1(array, 55);
-        System.out.println("index = " + index);
+        System.out.println("第一个值等于给定值的元素 = " + index);
         index = binarySearch.search2(array, 55);
-        System.out.println("index = " + index);
+        System.out.println("最后一个值等于给定值的元素 = " + index);
 //        array = new int[]{3,4,6,7,10};
         index = binarySearch.search3(array, 99);
-        System.out.println("index = " + index);
+        System.out.println("第一个大于等于给定值的元素 = " + index);
         index = binarySearch.search4(array, 55);
-        System.out.println("index = " + index);
+        System.out.println("最后一个小于等于给定值的元素 = " + index);
+        index = binarySearch.minSearch(array, 55);
+        System.out.println("minSearch = " + index);
 
     }
 

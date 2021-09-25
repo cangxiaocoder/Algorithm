@@ -87,6 +87,8 @@ public class BinarySearch {
                 high = mid-0.000001;
             }
         }
+        System.out.println("low = " + low);
+        System.out.println("high = " + high);
         return BigDecimal.valueOf(mid).setScale(6,BigDecimal.ROUND_HALF_UP).doubleValue();
     }
 
