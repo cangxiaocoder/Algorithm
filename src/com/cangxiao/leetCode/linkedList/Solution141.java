@@ -1,5 +1,8 @@
 package com.cangxiao.leetCode.linkedList;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 给定一个链表，判断链表中是否有环。
  * <p>
@@ -33,6 +36,20 @@ public class Solution141 {
             slow = slow.next;
         }
         return fast != null && fast.next != null;
+    }
+
+    public boolean hasCycle2(ListNode head) {
+        if (head == null) return false;
+        Map<ListNode, Integer> map = new HashMap<>();
+        ListNode p = head;
+        while (p !=null){
+            if (map.containsKey(p)){
+                return true;
+            }
+            map.put(p,1);
+            p = p.next;
+        }
+        return false;
     }
 
 

@@ -2,9 +2,7 @@ package com.cangxiao.leetCode.code1;
 
 import sun.net.idn.Punycode;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Author cangxiao
@@ -22,6 +20,24 @@ public class Solution {
             map.put(nums[i],i);
         }
         return null;
+    }
+
+    /**
+     * 将所有符合得到结果都找出来
+     * @param nums
+     * @param target
+     * @return
+     */
+    public List<int[]> twoSum3(int[] nums, int target) {
+        List<int[]> list = new ArrayList<>();
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if(map.containsKey(target - nums[i])){
+                 list.add(new int[]{map.get(target-nums[i]), i});
+            }
+            map.put(nums[i],i);
+        }
+        return list;
     }
 
     /**
@@ -45,8 +61,12 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = new int[]{3,2,4,15};
+        int[] nums = new int[]{3,2,4,15,3};
         System.out.println(Arrays.toString(solution.twoSum(nums, 6)));
         System.out.println(Arrays.toString(solution.twoSum2(nums, 6)));
+        List<int[]> list = solution.twoSum3(nums, 6);
+        for (int[] ints : list) {
+            System.out.println(Arrays.toString(ints));
+        }
     }
 }
