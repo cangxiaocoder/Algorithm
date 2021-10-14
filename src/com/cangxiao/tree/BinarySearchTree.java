@@ -1,12 +1,6 @@
 package com.cangxiao.tree;
 
-import com.cangxiao.stack.Valid;
-
-import javax.swing.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import java.sql.SQLOutput;
 import java.util.Stack;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * 二叉查找树要求，在树中的任意一个节点，其左子树中的每个节点的值，都要小于这个节点的值，而右子树节点的值都大于这个节点的值
@@ -102,9 +96,9 @@ public class BinarySearchTree {
             }
         }
         if (p == null) return -1;
-        //当删除的节点有两个子节点时
+        //1. 当删除的节点有两个子节点时
         if (p.left != null && p.right != null) {
-            //直到删除节点右子树中最小的节点
+            //直到删除节点右子树中最小的节点， 即找到右子树或左子树中最接近删除的节点的值
             Node minP = p.right;
             Node minPParent = p;//记录删除节点minP的父节点
             while (minP.left != null) {
@@ -117,9 +111,9 @@ public class BinarySearchTree {
             pParent = minPParent;
         }
         /*删除的节点有两个子节点 经过替换操作，删除的节点变成了minP,而minP没有子节点或只有一个右子树，
-            将删除节点包含两个子节点的情况变成了只有一个自己诶单或没有子节点的状态
+            将删除节点包含两个子节点的情况变成了只有一个子节点或没有子节点的状态
          */
-        //当删除的节点只有一个子节点或没有子节点时,如果有子节点，则这个子节点可能是右子树也可能是左子树
+        //2. 当删除的节点只有一个子节点或没有子节点时,如果有子节点，则这个子节点可能是右子树也可能是左子树
         Node child = p;
         if (p.left != null) child = p.left;
         else if (p.right != null) child = p.right;
