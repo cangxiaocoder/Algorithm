@@ -1,6 +1,5 @@
 package com.cangxiao.leetCode.middle;
 
-import javax.swing.text.html.HTMLWriter;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +9,7 @@ import java.util.Map;
  * @Date 2021/10/2
  * @Desc 面试题 16.21. 交换和
  */
-public class SolutionInterView16_21 {
+public class InterView16_21 {
 
     public int[] findSwapValues(int[] array1, int[] array2) {
         Map<Integer, Integer> map = new HashMap<>();
@@ -34,7 +33,7 @@ public class SolutionInterView16_21 {
     }
 
     public static void main(String[] args) {
-        SolutionInterView16_21 solution = new SolutionInterView16_21();
+        InterView16_21 solution = new InterView16_21();
         int[] values = solution.findSwapValues(new int[]{519, 886, 282, 382, 662, 4718, 258, 719, 494, 795}, new int[]{52, 20, 78, 50, 38, 96, 81, 20});
         System.out.println("values = " + Arrays.toString(values));
     }

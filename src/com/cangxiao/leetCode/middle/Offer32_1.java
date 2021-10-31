@@ -11,7 +11,7 @@ import java.util.List;
  * @Date 2021/10/16
  * @Desc 剑指 Offer 32 - I. 从上到下打印二叉树
  */
-public class SolutionOffer32_1 {
+public class Offer32_1 {
 
     public int[] levelOrder(TreeNode root) {
         if (root==null) return new int[0];

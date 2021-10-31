@@ -1,5 +1,7 @@
 package com.cangxiao.leetCode.easy;
 
+import java.util.Stack;
+
 /**
  * @Author cangxiao
  * @Date 2021/10/19
@@ -25,5 +27,28 @@ public class Solution98 {
             return false;
         }
         return check(root.left,minValue,root.val) && check(root.right,root.val,maxValue);
+    }
+
+    /**
+     * 中序遍历， 如果后面节点的值大于等于前面节点的值，则不是二叉搜索树
+     * @param root
+     * @return
+     */
+    public boolean isValidBST2(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        long inorder  = Long.MIN_VALUE;
+        while (!stack.isEmpty() || root!=null){
+            while (root!=null){
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (root.val<inorder ){
+                return false;
+            }
+            inorder = root.val;
+            root = root.right;
+        }
+        return true;
     }
 }
