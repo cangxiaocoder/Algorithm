@@ -1,11 +1,7 @@
 package com.cangxiao.leetCode.middle;
 
-import com.cangxiao.sort.BubbleSort;
-
-import javax.swing.table.TableModel;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.DataFormatException;
 
 /**
  * @Author cangxiao
@@ -31,9 +27,10 @@ public class Offer34 {
      */
     private void dfs(TreeNode node, int target, List<Integer> path, int sum) {
         path.add(node.val);
+        sum+= node.val;
         if (node.left== null && node.right==null){
             //当前节点值 + 当前路径节点值的和 == target,满足条件
-            if (sum + node.val == target){
+            if (sum == target){
                 List<Integer> tempPath = new ArrayList<>(path);
                 result.add(tempPath);
             }
@@ -42,10 +39,10 @@ public class Offer34 {
             return;
         }
         if (node.left!=null){
-            dfs(node.left,target,path,sum+node.val);
+            dfs(node.left,target,path,sum);
         }
         if (node.right!=null){
-            dfs(node.right,target,path,sum+ node.val);
+            dfs(node.right,target,path,sum);
         }
         if (path.size()>0){
             path.remove(path.size() - 1);
