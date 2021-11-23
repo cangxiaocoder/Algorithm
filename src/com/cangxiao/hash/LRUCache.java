@@ -1,9 +1,5 @@
 package com.cangxiao.hash;
 
-import sun.net.idn.Punycode;
-import sun.security.krb5.internal.EncKDCRepPart;
-import sun.security.krb5.internal.tools.Klist;
-
 import java.util.HashMap;
 import java.util.Map;
 

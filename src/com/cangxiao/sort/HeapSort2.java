@@ -5,13 +5,14 @@ import java.util.Arrays;
 /**
  * @Author cangxiao
  * @Date 2021/7/17
- * @Desc 堆排序 - 大顶堆
+ * @Desc 堆排序 - 小顶堆
  */
-public class HeapSort {
+public class HeapSort2 {
 
     public static void main(String[] args) {
         int[] array = {6,24,13,28,10,11,1,5,3};
-        HeapSort heapSort = new HeapSort();
+//        int[] array = {0,2};
+        HeapSort2 heapSort = new HeapSort2();
         heapSort.sort(array);
         System.out.println(Arrays.toString(array));
     }
@@ -25,7 +26,7 @@ public class HeapSort {
     public void sort(int[] array){
         if(array.length<2)return;
          //建堆
-         buildHeap(array);
+         buildHeap(array,array.length-1);
          //排序
          int k = array.length - 1;
          while (k > 0) {
@@ -41,27 +42,28 @@ public class HeapSort {
      * 由于第一个节点不存储元素，所以(array.length-1)/2 为最后一个叶子节点的父节点,
      * @param array
      */
-    private void buildHeap(int[] array) {
+    private void buildHeap(int[] array, int n) {
 
-        for (int i = (array.length-1)/2; i >=0; i--) {
-            heapify(array,array.length-1,i);
+        for (int i = n/2; i >= 0; i--) {
+            heapify(array,n,i);
         }
     }
 
     private void heapify(int[] array, int n, int i) {
         while (true){
-            //最大值的位置
-            int maxIndex = i;
-            if(2*i+1<=n && array[i]<array[2*i+1]){
-                maxIndex = 2*i+1;
+            //最小值的索引位置,如果当前节点既，既小于左子节点也小于右子节点，
+            // 需要将最小值放到最后所以需要与右子节点交换位置
+            int minIndex = i;
+            if(2*i+1<=n && array[i]>array[2*i+1]){
+                minIndex = 2*i+1;
             }
-            if(2*i+2<=n && array[maxIndex]<array[2*i+2]){
-                maxIndex = 2*i+2;
+            if(2*i+2<=n && array[minIndex]>array[2*i+2]){
+                minIndex = 2*i+2;
             }
-            if(i==maxIndex)break;
-            swap(array,maxIndex,i);
+            if(i==minIndex)break;
+            swap(array,minIndex,i);
             //记录交换后的索引
-            i = maxIndex;
+            i = minIndex;
         }
     }
     private void swap(int[] heap, int i, int j){

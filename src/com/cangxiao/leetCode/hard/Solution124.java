@@ -1,7 +1,5 @@
 package com.cangxiao.leetCode.hard;
 
-import com.sun.deploy.security.ValidationState;
-
 /**
  * @Author cangxiao
  * @Date 2021/11/8
@@ -31,6 +29,11 @@ public class Solution124 {
         return val;
     }
 
+    /**
+     * 返回当前节点左右子树最大和
+     * @param root
+     * @return
+     */
     private int dfs2(TreeNode root) {
         if (root==null) return 0;
         //只有左右节点的值大于0才选择当前节点，
