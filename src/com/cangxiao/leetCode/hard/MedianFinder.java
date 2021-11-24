@@ -10,13 +10,15 @@ import java.util.PriorityQueue;
  * https://leetcode-cn.com/problems/find-median-from-data-stream/
  */
 public class MedianFinder {
-
+    //小顶堆存放较大的值
     private PriorityQueue<Integer> minQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o));
+    //大顶堆存放较小的值
     private PriorityQueue<Integer> maxQueue = new PriorityQueue<>((o1, o2) -> o2-o1);
 
     public MedianFinder() {}
 
     public void addNum(int num) {
+        //num比大顶堆的堆顶值还小，属于较小的值，应该放在大顶堆
         if (maxQueue.isEmpty() || num < maxQueue.peek()){
             maxQueue.offer(num);
         }else {
@@ -47,7 +49,8 @@ class MedianFinder2 {
     public MedianFinder2() {}
 
     public void addNum(int num) {
-        if (minQueue.isEmpty() || num < minQueue.peek()){
+        //num比小顶堆的堆顶值还大，属于较大的值，应该放在小顶堆
+        if (minQueue.isEmpty() || num > minQueue.peek()){
             minQueue.offer(num);
         }else {
             maxQueue.offer(num);
@@ -62,10 +65,19 @@ class MedianFinder2 {
     }
 
     public double findMedian() {
-        if (maxQueue.size()>minQueue.size()){
-            return maxQueue.peek();
+        if (minQueue.size()>maxQueue.size()){
+            return minQueue.peek();
         }else {
             return (double) (maxQueue.peek() + minQueue.peek()) /2;
         }
+    }
+
+    public static void main(String[] args) {
+        MedianFinder2 medianFinder = new MedianFinder2();
+        medianFinder.addNum(1);
+        medianFinder.addNum(2);
+        System.out.println(medianFinder.findMedian());
+        medianFinder.addNum(3);
+        System.out.println(medianFinder.findMedian());
     }
 }

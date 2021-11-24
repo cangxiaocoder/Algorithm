@@ -49,3 +49,37 @@ public class Solution23 {
         return head.next;
     }
 }
+class Solution {
+    /**
+     * 用于存储当前节点，只存储当前节点的值无法找到下一个节点
+     */
+    private static class QElement{
+        private ListNode curNode;
+
+        public QElement(ListNode curNode) {
+            this.curNode = curNode;
+        }
+    }
+
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length==0) return null;
+
+        PriorityQueue<QElement> minQueue = new PriorityQueue<>(Comparator.comparingInt(o -> o.curNode.val));
+        for (ListNode listNode : lists) {
+            minQueue.offer(new QElement(listNode));
+        }
+        ListNode head = new ListNode();
+        ListNode tail = head;
+        while (!minQueue.isEmpty()){
+            ListNode curNode = minQueue.poll().curNode;
+            tail.next = curNode;
+            tail = tail.next;
+            if (curNode.next!=null){
+                minQueue.offer(new QElement(curNode.next));
+            }
+        }
+        return head.next;
+    }
+
+}
