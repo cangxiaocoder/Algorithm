@@ -42,15 +42,15 @@ public class Offer68_1 {
         int rightContains = 0;
         if (root.val >= p.val && root.val >= q.val) {
             //左子树包含p/q的个数
-            leftContains = dfs(root.left, p, q);
+            leftContains = dfs2(root.left, p, q);
         } else if (root.val < p.val && root.val < q.val) {
             //右子树包含p/q的个数
-            rightContains = dfs(root.right, p, q);
+            rightContains = dfs2(root.right, p, q);
         } else {
             //左子树包含p/q的个数
-            leftContains = dfs(root.left, p, q);
+            leftContains = dfs2(root.left, p, q);
             //右子树包含p/q的个数
-            rightContains = dfs(root.right, p, q);
+            rightContains = dfs2(root.right, p, q);
         }
 
         int rootContains = 0;
@@ -75,11 +75,11 @@ public class Offer68_1 {
         if (result != null) return;
         if (root.val >= p.val) {
             //左子树包含p/q的个数
-           dfs(root.left, p, q);
+            dfs3(root.left, p, q);
         }
         if (root.val < p.val && root.val < q.val) {
             //右子树包含p/q的个数
-            dfs(root.right, p, q);
+            dfs3(root.right, p, q);
         }
     }
 }

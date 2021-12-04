@@ -11,6 +11,10 @@ public class Solution114 {
     public void flatten(TreeNode root) {
         dfs(root);
         root = head.right;
+        while (root!=null){
+            System.out.println(root.val);
+            root = root.right;
+        }
     }
 
     private void dfs(TreeNode root) {
@@ -20,7 +24,13 @@ public class Solution114 {
         tail.left = null;
         tail.right = root;
         tail = root;
-        dfs(left);
+        dfs(root.left);
         dfs(right);
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(6,new TreeNode(5,new TreeNode(4),new TreeNode(3)),new TreeNode(1));
+        Solution114 solution114 = new Solution114();
+        solution114.flatten(root);
     }
 }
