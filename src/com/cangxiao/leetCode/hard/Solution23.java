@@ -28,9 +28,9 @@ public class Solution23 {
         int length = lists.length;
         PriorityQueue<QElement> minQueue = new PriorityQueue<>(Comparator.comparingInt(q -> q.currentNode.val));
         //将所有的链表的第一个节点放到最小堆中，找到最小值
-        for (int i = 0; i < length; i++) {
-            if (lists[i]!=null)
-                minQueue.offer(new QElement(lists[i]));
+        for (ListNode list : lists) {
+            if (list != null)
+                minQueue.offer(new QElement(list));
         }
         ListNode head = new ListNode();
         ListNode tail = head;
