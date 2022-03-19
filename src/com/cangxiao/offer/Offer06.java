@@ -1,5 +1,7 @@
 package com.cangxiao.offer;
 
+import com.cangxiao.leetCode.linkedList.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class Offer06 {
     public int[] reversePrint(ListNode head) {
         if (head==null) return new int[0];
         List<Integer> list = new ArrayList<>();
-        ListNode p = head;
+       ListNode p = head;
         while (p!=null){
             list.add(p.val);
             p = p.next;
@@ -26,9 +28,4 @@ public class Offer06 {
         return result;
     }
 
-}
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
 }
