@@ -1,5 +1,7 @@
 package com.cangxiao.offer;
 
+import com.cangxiao.offer.common.TreeNode;
+
 /**
  * @Author cangxiao
  * @Date 2022/2/22
@@ -32,12 +34,3 @@ public class Offer07 {
 
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
