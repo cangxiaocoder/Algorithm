@@ -1,6 +1,6 @@
 package com.cangxiao.hash;
 
-import sun.net.idn.Punycode;
+
 
 /**
  * @Author cangxiao

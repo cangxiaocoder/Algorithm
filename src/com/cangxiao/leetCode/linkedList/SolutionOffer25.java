@@ -1,6 +1,5 @@
 package com.cangxiao.leetCode.linkedList;
 
-import sun.plugin.WJcovUtil;
 
 /**
  * @Author cangxiao
@@ -61,6 +60,6 @@ public class SolutionOffer25 {
         l2.add(4);
         SolutionOffer25 solutionOffer25 = new SolutionOffer25();
         ListNode listNode = solutionOffer25.mergeTwoLists2(l1.head, l2.head);
-        listNode.print(listNode);
+        ListNode.print(listNode);
     }
 }

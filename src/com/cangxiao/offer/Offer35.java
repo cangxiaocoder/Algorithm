@@ -1,7 +1,5 @@
 package com.cangxiao.offer;
 
-import java.awt.image.PackedColorModel;
-
 /**
  * @Author cangxiao
  * @Date 2022/4/24
@@ -56,6 +54,7 @@ public class Offer35 {
         p5.random = p1;
         Offer35 offer35 = new Offer35();
         Node node = offer35.copyRandomList(p1);
+        System.out.println(node);
     }
 }
 

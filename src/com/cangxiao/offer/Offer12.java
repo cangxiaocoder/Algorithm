@@ -33,7 +33,7 @@ public class Offer12 {
         //标记已访问的元素
         visited[i][j] = true;
         //从当前元素出发向上下左右搜索
-        boolean result= dfs(board, i + 1, j, chars, index + 1, visited) ||
+        boolean result = dfs(board, i + 1, j, chars, index + 1, visited) ||
                 dfs(board, i - 1, j, chars, index + 1, visited) ||
                 dfs(board, i, j + 1, chars, index + 1, visited) ||
                 dfs(board, i, j - 1, chars, index + 1, visited);
@@ -53,7 +53,7 @@ public class Offer12 {
         //标记已访问的元素
         visited[i][j] = true;
         //从当前元素出发向上下左右搜索
-        int[][] directions = {{0,1},{0,-1},{-1,0},{1,0}};
+        int[][] directions = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
         boolean result = false;
         for (int[] direction : directions) {
             int newI = i + direction[0];
@@ -70,7 +70,7 @@ public class Offer12 {
     }
 
     public static void main(String[] args) {
-        char[][] board = new char[][]{{'C','A','A'}, {'A','A','A'},{'B','C','D'}};
+        char[][] board = new char[][]{{'C', 'A', 'A'}, {'A', 'A', 'A'}, {'B', 'C', 'D'}};
         boolean exist = new Offer12().exist(board, "AAB");
         System.out.println("exist = " + exist);
     }

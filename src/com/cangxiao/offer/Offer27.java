@@ -1,7 +1,6 @@
 package com.cangxiao.offer;
 
 import com.cangxiao.offer.common.TreeNode;
-import com.sun.media.sound.RIFFInvalidDataException;
 
 /**
  * @Author cangxiao

@@ -1,7 +1,5 @@
 package com.cangxiao.leetCode.code1;
 
-import sun.net.idn.Punycode;
-
 import java.util.*;
 
 /**

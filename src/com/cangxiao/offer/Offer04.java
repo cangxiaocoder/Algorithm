@@ -1,6 +1,5 @@
 package com.cangxiao.offer;
 
-import java.lang.management.GarbageCollectorMXBean;
 
 /**
  * @Author cangxiao

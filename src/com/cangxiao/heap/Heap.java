@@ -77,8 +77,6 @@ public class Heap {
         //删除最后一个元素
         heap[count] = 0;
         count--;
-        int i = 1;
-        int maxIndex = i;
         heapify(heap, count, 1);
     }
 
