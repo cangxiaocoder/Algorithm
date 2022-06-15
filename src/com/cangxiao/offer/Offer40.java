@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class Offer40 {
 
     public static void main(String[] args) {
-//        int[] arr = new int[]{4,5,1,6,2,7,3,8};
-        int[] arr = new int[]{3,2,1};
+       int[] arr = new int[]{4,5,1,6,2,7,3,8};
+        // int[] arr = new int[]{3,2,1};
         Offer40 offer40 = new Offer40();
         int[] numbers = offer40.getLeastNumbers(arr, 2);
         System.out.println(Arrays.toString(numbers));
