@@ -20,9 +20,9 @@ public class PivotIndex {
         return -1;
     }
     public static void main(String[] args) {
-//        int[] nums = {1, 7, 3, 6, 5, 6};
+        int[] nums = {1, 7, 3, 6, 5, 6};
 //        int[] nums = {1, -1, 0, 0, -2, 2};
-        int[] nums = {2, -2, 0, 0, -1, 1};
+//        int[] nums = {2, -2, 0, 0, -1, 1};
 //        int[] nums = {2, 1, -1};
         PivotIndex pivotIndex = new PivotIndex();
         System.out.println("solution.pivotIndex(nums) = " + pivotIndex.pivotIndex(nums));
