@@ -1,6 +1,5 @@
 package com.cangxiao.leetCode.middle;
 
-import com.cangxiao.leetCode.easy.Solution147;
 import com.cangxiao.leetCode.linkedList.LinkedList;
 import com.cangxiao.leetCode.linkedList.ListNode;
 

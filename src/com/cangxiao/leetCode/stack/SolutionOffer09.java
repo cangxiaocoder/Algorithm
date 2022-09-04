@@ -1,6 +1,5 @@
 package com.cangxiao.leetCode.stack;
 
-import java.util.LinkedList;
 import java.util.Stack;
 
 /**
