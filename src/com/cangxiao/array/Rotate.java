@@ -5,9 +5,9 @@ import java.util.Arrays;
 /**
  * @Author cangxiao
  * @Date 2022/9/13
- * @Desc
+ * @Desc 旋转矩阵
  */
-public class Solution {
+public class Rotate {
 
     public void rotate(int[][] matrix) {
         int length = matrix.length;
@@ -62,14 +62,14 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Rotate rotate = new Rotate();
         int[][] matrix = {
                 {5, 1, 9, 11},
                 {2, 4, 8, 10},
                 {13, 3, 6, 7},
                 {15, 14, 12, 16}
         };
-        solution.rotate(matrix);
+        rotate.rotate(matrix);
         System.out.println("matrix = " + Arrays.deepToString(matrix));
     }
 }
