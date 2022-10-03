@@ -5,9 +5,9 @@ import java.util.Arrays;
 /**
  * @Author cangxiao
  * @Date 2021/7/17
- * @Desc 堆实现 - 大顶堆
+ * @Desc 堆实现 - 小顶堆
  */
-public class Heap {
+public class MinHeap {
     private int[] heap;
     private int n; //堆中可以存储最大数据个数
     private int count;//堆中已存储数据的个数
@@ -17,7 +17,7 @@ public class Heap {
      * 数组中下标为 i 的节点的左子节点，就是下标为 i∗2 的节点，右子节点就是下标为 i∗2+1 的节点，父节点就是下标为 i/2 的节点。
      * @param capacity
      */
-    public Heap(int capacity) {
+    public MinHeap(int capacity) {
 
         heap = new int[capacity+1];
         n = capacity;
@@ -40,7 +40,7 @@ public class Heap {
      * @param i
      */
     private void heapify(int[] heap, int i) {
-        while (i /2>0 && heap[i]>heap[i /2]){
+        while (i /2>0 && heap[i]<heap[i /2]){
             swap(heap, i, i /2);
             i = i /2;
         }
@@ -86,18 +86,18 @@ public class Heap {
      * @param i
      */
     private void heapify(int[] heap, int count, int i) {
-        int maxIndex = i;
+        int minIndex = i;
         while (true){
-            if(2 * i <=count && heap[i]<heap[2* i]){
-                maxIndex = 2* i;
+            if(2 * i <=count && heap[i]>heap[2* i]){
+                minIndex = 2* i;
             }
-            if(2 * i +1<=count && heap[maxIndex]<heap[2* i +1]){
-                maxIndex = 2* i +1;
+            if(2 * i +1<=count && heap[minIndex]>heap[2* i +1]){
+                minIndex = 2* i +1;
             }
-            if(i == maxIndex)break;
-            swap(heap, maxIndex, i);
+            if(i == minIndex)break;
+            swap(heap, minIndex, i);
             //记录交换后的索引
-            i = maxIndex;
+            i = minIndex;
         }
     }
 
@@ -108,9 +108,9 @@ public class Heap {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] {0,33,27,21,16,13,15,19,5,6,7,8,1,2,12};
+        int[] arr = new int[] {33,27,21,16,13,15,19,5,6,7,8,1,2,12,0};
 //        int[] arr = new int[] {5,10};
-        Heap heap = new Heap(15);
+        MinHeap heap = new MinHeap(15);
         for (int i : arr) {
             heap.insert(i);
         }
