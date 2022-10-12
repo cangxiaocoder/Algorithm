@@ -46,7 +46,9 @@ public class MyQueue {
     /** Removes the element from in front of queue and returns that element. */
     public int pop() {
         if(outStack.isEmpty()){
-           in2out();
+            while (!inStack.isEmpty()){
+                outStack.push(inStack.pop());
+            }
         }
         return outStack.pop();
     }
@@ -54,7 +56,9 @@ public class MyQueue {
     /** Get the front element. */
     public int peek() {
         if(outStack.isEmpty()){
-            in2out();
+            while (!inStack.isEmpty()){
+                outStack.push(inStack.pop());
+            }
         }
        return outStack.peek();
     }
@@ -64,11 +68,6 @@ public class MyQueue {
         return outStack.isEmpty() && inStack.isEmpty();
     }
 
-    public void in2out(){
-        while (!inStack.isEmpty()){
-            outStack.push(inStack.pop());
-        }
-    }
 }
 
 /**
