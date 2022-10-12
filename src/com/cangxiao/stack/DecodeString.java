@@ -1,14 +1,7 @@
 package com.cangxiao.stack;
 
-import com.cangxiao.leetCode.stack.LinkedListStack;
-import com.cangxiao.leetCode.stack.Stack;
-import com.cangxiao.search.Test;
-
-import java.io.BufferedReader;
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
 /**
  * @Author cangxiao
