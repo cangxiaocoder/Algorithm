@@ -1,7 +1,5 @@
 package com.cangxiao.leetCode.easy;
 
-import com.sun.media.sound.RIFFInvalidDataException;
-
 /**
  * @Author cangxiao
  * @Date 2021/9/25
