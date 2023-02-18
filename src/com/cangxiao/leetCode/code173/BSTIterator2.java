@@ -1,7 +1,5 @@
 package com.cangxiao.leetCode.code173;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /**
