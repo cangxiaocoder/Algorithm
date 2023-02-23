@@ -1,7 +1,6 @@
 package com.cangxiao.leetCode.interview;
 
 import java.util.Arrays;
-import java.util.TooManyListenersException;
 
 /**
  * 珠玑妙算游戏（the game of master mind）的玩法如下。
