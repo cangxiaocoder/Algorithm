@@ -249,7 +249,7 @@ public class BinarySearchTree {
     /**
      * [10,12,13,11,8,9,5,6,3]
      * 参考：[递归和栈两种方式解决，最好的击败了100%的用户 - 二叉搜索树的后序遍历序列 - 力扣（LeetCode） (leetcode-cn.com)]
-     * (https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/solution/di-gui-he-zhan-liang-chong-fang-shi-jie-jue-zui-ha/)
+     * (<a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/solution/di-gui-he-zhan-liang-chong-fang-shi-jie-jue-zui-ha/">...</a>)
      *5\2\3\6\1
      */
     private boolean verifyPostorder1(int[] postorder){
