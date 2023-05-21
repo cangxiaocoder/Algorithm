@@ -38,5 +38,6 @@ public class HJ4 {
             }
             
         }
+        in.close();
     }
 }
