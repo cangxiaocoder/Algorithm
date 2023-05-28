@@ -3,7 +3,6 @@ package com.cangxiao.leetCode.recursion;
 import com.cangxiao.leetCode.linkedList.LinkedList;
 import com.cangxiao.leetCode.linkedList.ListNode;
 
-import javax.swing.text.rtf.RTFEditorKit;
 
 /**
  * 定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。
