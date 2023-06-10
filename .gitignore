@@ -1,6 +1,7 @@
 # Project exclude paths
 /out/
 .git
+*/test/
 .gitignore
 *.iml
 .idea/
