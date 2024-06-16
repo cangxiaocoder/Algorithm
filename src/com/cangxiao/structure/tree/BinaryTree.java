@@ -1,10 +1,10 @@
 package com.cangxiao.structure.tree;
 
 
-import com.sun.media.sound.RIFFInvalidDataException;
-
-import java.util.*;
-import java.util.logging.Level;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * @Author: cangxiao
