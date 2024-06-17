@@ -1,5 +1,7 @@
 package com.cangxiao.leetCode.linkedList;
 
+import com.cangxiao.linkedlist.ListNode;
+
 import java.util.HashMap;
 import java.util.Map;
 

@@ -1,7 +1,7 @@
 package com.cangxiao.leetCode.middle;
 
 import com.cangxiao.leetCode.linkedList.LinkedList;
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 /**
  * 给你链表的头结点head，请将其按 升序 排列并返回 排序后的链表 。

@@ -1,6 +1,6 @@
 package com.cangxiao.leetCode.recursion;
 
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,7 @@
 package com.cangxiao.leetCode.linkedList;
 
+import com.cangxiao.linkedlist.ListNode;
+
 /**
  * 给你一个链表，每k个节点一组进行翻转，请你返回翻转后的链表。
  *

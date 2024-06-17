@@ -1,7 +1,7 @@
 package com.cangxiao.leetCode.easy;
 
 import com.cangxiao.leetCode.linkedList.LinkedList;
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 /**
  * @Author cangxiao

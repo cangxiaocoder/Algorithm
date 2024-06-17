@@ -1,7 +1,7 @@
 package com.cangxiao.leetCode.interview;
 
 import com.cangxiao.leetCode.linkedList.LinkedList;
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 import java.util.HashMap;
 import java.util.Map;

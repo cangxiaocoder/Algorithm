@@ -1,6 +1,6 @@
 package com.cangxiao.leetCode.hard;
 
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

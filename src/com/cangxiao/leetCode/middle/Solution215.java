@@ -1,8 +1,5 @@
 package com.cangxiao.leetCode.middle;
 
-import com.cangxiao.leetCode.linkedList.LinkedList;
-import com.cangxiao.leetCode.linkedList.ListNode;
-
 /**
  * @Author cangxiao
  * @Date 2021/9/12

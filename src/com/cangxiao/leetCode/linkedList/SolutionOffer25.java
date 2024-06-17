@@ -1,6 +1,8 @@
 package com.cangxiao.leetCode.linkedList;
 
 
+import com.cangxiao.linkedlist.ListNode;
+
 /**
  * @Author cangxiao
  * @Date 2021/8/24

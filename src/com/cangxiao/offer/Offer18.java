@@ -1,6 +1,6 @@
 package com.cangxiao.offer;
 
-import com.cangxiao.leetCode.linkedList.ListNode;
+import com.cangxiao.linkedlist.ListNode;
 
 /**
  * @Author cangxiao

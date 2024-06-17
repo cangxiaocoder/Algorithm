@@ -1,4 +1,4 @@
-package com.cangxiao.leetCode.linkedList;
+package com.cangxiao.linkedlist;
 
 public class ListNode {
     public int val;
@@ -21,10 +21,10 @@ public class ListNode {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         while (p != null) {
-            sb.append(p.val).append(",");
+            sb.append(p.val).append(", ");
             p = p.next;
         }
-        sb.append("null }");
+        sb.append("null}");
          System.out.println(sb.toString());
 
     }

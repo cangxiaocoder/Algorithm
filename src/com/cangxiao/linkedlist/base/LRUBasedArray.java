@@ -1,4 +1,4 @@
-package com.cangxiao.linkedlist;
+package com.cangxiao.linkedlist.base;
 
 import java.util.Arrays;
 import java.util.HashMap;
