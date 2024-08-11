@@ -1,4 +1,4 @@
-package com.cangxiao.training;
+package com.cangxiao.crushTrain;
 
 /**
  * 有X瓶酒，每3个空瓶子可以换一瓶酒，每7个盖子也可以换一瓶酒，最后可以和多少酒

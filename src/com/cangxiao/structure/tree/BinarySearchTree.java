@@ -1,4 +1,4 @@
-package com.cangxiao.tree;
+package com.cangxiao.structure.tree;
 
 import java.util.Stack;
 
