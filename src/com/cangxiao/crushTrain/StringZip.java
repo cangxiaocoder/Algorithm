@@ -28,11 +28,12 @@ public class StringZip {
             result.append(temp).append(count);
             i = j;
         }
-        return result.toString();
+        return result.length()<len?result.toString():str;
     }
 
     public static void main(String[] args) {
         StringZip stringZip = new StringZip();
         System.out.println(stringZip.zip("aabcccccaaa"));
+        System.out.println(stringZip.zip("abbccd"));
     }
 }
