@@ -5,7 +5,7 @@ package com.cangxiao.crushTrain;
   * @Date 2024/9/5
   * @Desc 给定一个32位无符号整数，打印该整数的中文描述。
   */
-public class IntegerFormat {
+public class IntegerFormatCN {
     String[] numStr = {"","一","二","三","四","五","六","七","八","九"};
     String[] digitals = {"","十","百","千"};
     String[] units = {"","万","亿"};
@@ -54,11 +54,11 @@ public class IntegerFormat {
 //        System.out.println(new IntegerFormat().formatInteger(1234));
 //        System.out.println(new IntegerFormat().formatInteger(12345));
 //        System.out.println(new IntegerFormat().formatInteger(123456));
-        System.out.println(new IntegerFormat().formatInteger(10000001));
-        System.out.println(new IntegerFormat().formatInteger(100000000));
-        System.out.println(new IntegerFormat().formatInteger(1000000000));
-        System.out.println(new IntegerFormat().formatInteger(10));
-        System.out.println(new IntegerFormat().formatInteger(1001));
-        System.out.println(new IntegerFormat().formatInteger(0));
+        System.out.println(new IntegerFormatCN().formatInteger(10000001));
+        System.out.println(new IntegerFormatCN().formatInteger(100000000));
+        System.out.println(new IntegerFormatCN().formatInteger(1000000000));
+        System.out.println(new IntegerFormatCN().formatInteger(10));
+        System.out.println(new IntegerFormatCN().formatInteger(1001));
+        System.out.println(new IntegerFormatCN().formatInteger(0));
     }
 }
