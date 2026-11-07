@@ -41,10 +41,39 @@ public class Valid {
         return stack.isEmpty();
     }
 
+    public boolean isValid2(String s) {
+        if (s.isEmpty()){
+            return true;
+        }
+        Stack<Character> stack = new Stack<>();
+        int length = s.length();
+        for (int i = 0; i < length; i++) {
+            char c = s.charAt(i);
+            switch (c){
+                case '(':
+                    stack.push(')');
+                    break;
+                case '[':
+                    stack.push(']');
+                    break;
+                case '{':
+                    stack.push('}');
+                    break;
+                default:
+                    if (stack.isEmpty() || stack.pop() != c){
+                       return false;
+                    }
+            }
+        }
+        //栈中的元素匹配完，说明所有的括号都正好配对。
+        return stack.isEmpty();
+    }
+
     public static void main(String[] args) {
-        String s = "()";
+        String s = "]";
         Valid valid = new Valid();
-        boolean flag = valid.isValid(s);
+//        boolean flag = valid.isValid(s);
+        boolean flag = valid.isValid2(s);
         System.out.println("flag = " + flag);
     }
 }
