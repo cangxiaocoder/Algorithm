@@ -1,7 +1,5 @@
 package com.cangxiao.nowcoder.bfs;
 
-import com.cangxiao.leetCode.queue.CircularQueue;
-
 import java.util.*;
 
 /**
