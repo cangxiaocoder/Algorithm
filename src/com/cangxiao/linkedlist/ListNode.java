@@ -25,7 +25,20 @@ public class ListNode {
             p = p.next;
         }
         sb.append("null}");
-         System.out.println(sb.toString());
+         System.out.println(sb);
 
     }
+    public void print() {
+        ListNode p = this;
+        StringBuilder sb = new StringBuilder();
+        sb.append("{");
+        while (p != null) {
+            sb.append(p.val).append(", ");
+            p = p.next;
+        }
+        sb.append("null}");
+        System.out.println(sb);
+
+    }
+
 }
