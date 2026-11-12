@@ -1,6 +1,6 @@
 package com.cangxiao.offer;
 
-import com.cangxiao.offer.common.TreeNode;
+import com.cangxiao.common.TreeNode;
 
 /**
  * @Author cangxiao

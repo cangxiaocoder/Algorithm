@@ -1,4 +1,4 @@
-package com.cangxiao.offer.common;
+package com.cangxiao.common;
 
 /**
  * @Author cangxiao
